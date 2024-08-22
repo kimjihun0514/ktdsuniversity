@@ -2,6 +2,9 @@
 - A테이블의 PK값과  B테이블의 FK값이 같은 Row만 조회된다.
 - 각 테이블은 관련 정보만 담아둠.
 - 테이블 끼리 관계형성 해둬서 관련된 여러 정보를 가져온다.
+
+![image](https://github.com/user-attachments/assets/4771d688-db8d-4b13-a612-e056c2316194)
+
 ```SQL
 SELECT E.*
      , D.*
