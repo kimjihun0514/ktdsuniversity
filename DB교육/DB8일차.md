@@ -30,7 +30,8 @@ JDBC(Java DataBase Connector)를 통해 Oracle Database와 연동(API)
 
 - 구조
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/36dc32ce-7c4c-42ee-baa1-bff0ad2e294d/image.png)
+![image](https://github.com/user-attachments/assets/1e39980d-c7ad-4717-a25b-4be134f5eb86)
+
 
 - Connection
 
