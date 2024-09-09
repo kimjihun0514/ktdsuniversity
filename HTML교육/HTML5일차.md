@@ -83,25 +83,23 @@ static : 기본 포지션
 
 **relative** : relative가 적용 된 엘리먼트 내부에서 좌표계가 0부터 다시 시작(상대적 좌표가 생성) **absolute와 같이 사용✔**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/f731536c-cc9f-4e38-b98f-d8e20e621749/image.png)
+![image](https://github.com/user-attachments/assets/17310eb1-e189-4880-8358-de124508e50e)
 
 **fixed** : 스크롤을 움직이더라도 항상 같은 위치에 표시 (고정위치 메뉴, Floating menu, Floating Button등을 만들 때 사용)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/23fee2da-2107-4887-9b68-4d546f66d29e/image.png)
+![image](https://github.com/user-attachments/assets/92729836-eaf5-4bfe-98f3-ebc6721c71fe)
 
 **absolute** : 엘리먼트를 원하는 위치에 배치, Layered Popup, Dialog등을 표현할 때 주로 사용 → 스크롤의 영향을 받음 (Block, inline 둘 다 아님)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/ba733c7d-b93b-4878-8a61-5c54bc3d8606/image.png)
+![image](https://github.com/user-attachments/assets/93940de8-8ff2-4507-b277-1fabb3b313a4)
 
 - Document Flow 배치 좌표 기준
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/3f19f7ad-7db4-4091-9cbd-87fd31b91c8d/image.png)
+![image](https://github.com/user-attachments/assets/04e5e4a8-7b06-4279-bbda-33336ffb55d7)
 
 **sticky** : 정상적인 Document flow로 자리잡고 있다가, 스크롤이 움직일 때, 지정한 위치에 도달한 경우 Fixed처럼 동작(Header, Scroll-Spy등에 주로 사용)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/39986e50-bc2d-42a5-813f-ecaf952599ca/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/ce375663-da26-4558-855c-12c4510bff8e/image.png)
+![image](https://github.com/user-attachments/assets/06309857-3680-451d-b3a9-0419269deb21)
 
 ---
 
@@ -111,7 +109,7 @@ static : 기본 포지션
 - 엘리먼트 위에 다른 엘리먼트를 덮어 씌움
 - 중요한 내용을 가장 상위에 표현할 때 사용
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/c7a2dce0-9f83-4e84-8d6d-4e0dbbff3a9d/image.png)
+![image](https://github.com/user-attachments/assets/f5ffae6b-d172-4d50-89ee-ae52b3ddb987)
 
 ---
 
@@ -119,9 +117,11 @@ static : 기본 포지션
 
 자식 엘리먼트의 크기가 부모 엘리먼트의 크기를 벗어날 때 표현방법을 정의하는 프로퍼티
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/e60c770b-76fe-484f-8e8e-26ba3099601f/image.png)
+![image](https://github.com/user-attachments/assets/a0933f65-448d-428d-8eeb-79a8d910a893)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/ea0c112f-5be1-474e-894d-ed2318cfd244/image.png)
+
+![image](https://github.com/user-attachments/assets/ce4aebbd-27a1-4541-bc37-cd32fa61f6a7)
+
 
 hidden : 초과하는 자식 엘리먼트를 안보여줌
 
