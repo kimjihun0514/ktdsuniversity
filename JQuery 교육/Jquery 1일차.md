@@ -13,25 +13,39 @@
 
 사실 HTML 문서는 DOM(Document Object Model)의 집합
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/bafa3cd6-2ed8-4f27-bd93-e7736c807019/image.png)
+![image](https://github.com/user-attachments/assets/0b28433d-9f13-4ef4-890f-de7c129b3f52)
 
 javascript로 DOM을 컨트롤 하려면 코드가 길고 복잡해진다.
 
 그리고 브라우저마다 처리하는 방법이 다름
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/c7dd7a16-c621-40db-9276-197adc6d969c/image.png)
+![image](https://github.com/user-attachments/assets/5ce961fc-21ed-48fc-9bb1-7a4c71607758)
 
 ---
 
 jQuery는 브라우저 별로 적절한 처리를 수행함 → 크로스 브라우징
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/79217190-2021-4eef-934d-78e55bff508d/image.png)
+![image](https://github.com/user-attachments/assets/8a3ece16-d534-4d4c-94e5-84a2c5042a41)
 
 ---
 
 ## 엘리먼트를 스크립트로 가져오기
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/9b22dfba-9178-43f0-9698-cb4e996b7b62/image.png)
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery</title>
+    <script type="text/javascript">
+	    var h1 = document.getElementsByTagName("h1")[0];
+	    console.log(h1);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
 
 - console.log에 undefined가 출력됨
 - 그 이유는 HTML파일을 읽는 순서에 있음
@@ -47,9 +61,28 @@ jQuery는 브라우저 별로 적절한 처리를 수행함 → 크로스 브라
 
 → onload를 사용해 렌더링 이후에 출력하게 하면 됨
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/ab0521d3-198f-45c2-b182-f0e8e35d17a4/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/c8bc5618-b575-44f0-8f17-8325e4dda90a/image.png)
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery</title>
+    <script type="text/javascript">
+     window.onload = function () {
+      console.log("Rendering 이후");
+	    var h1 = document.getElementsByTagName("h1")[0];
+	    console.log(h1);
+	   };
+	   
+	   console.log("Rendering 이전");
+	   var h1 = document.getElementsByTagName("h1")[0];
+	   console.log(h1);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
 
 **`document.getElementsByTagName(”태그명”)[인덱스];`**
 
@@ -90,8 +123,8 @@ $().ready(function () {
   console.log(h1.text());
 });
 ```
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/9245870d-43e6-47b4-ba8e-b8fe769feddf/image.png)
+- 첫 번째 로그에는 배열이 나옴
+- 두 번째 로그에는 값이 나옴
 
 ### h1 엘리먼트의 내용을 변경
 
@@ -103,7 +136,7 @@ $().ready(function () {
 });
 ```
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/1cc0f601-7e96-4e5f-8540-a1f4fe36464d/image.png)
+- Where do you want to go? 가 어디로 갈까요? 로 변함
 
 **`text();`**에 파라미터가 없으면 getter, 파라미터가 있으면 setter
 
@@ -137,9 +170,6 @@ $().ready(function () {
       li.text("서울");
     });
     ```
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/114ad4e2-9ef7-436a-b0d0-c607712847f8/image.png)
-    
 
 ---
 
@@ -244,9 +274,7 @@ $("#destinations").find("li").first().next().prev();
 
 Traversing은 여러 개를 붙여서 사용할 수 있음
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/d77680f3-3b69-40d6-b36f-89c582c5c86d/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/23ee1f3d-b707-4331-8321-332aa821de63/image.png)
+![image](https://github.com/user-attachments/assets/ab893b84-cf4c-4ce8-9df8-a0e7ab127b73)
 
 ### 역순으로 조회하기
 
@@ -302,21 +330,51 @@ $("button").on("click", function () {});
 
 ### 선택한 요소만 삭제하기
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/08c4b234-460c-4763-aeb2-5981b5114b3b/image.png)
+![image](https://github.com/user-attachments/assets/05b5f362-e8b6-4bb3-88ea-733e513e3b1e)
 
 this를 사용하면 클릭 한 버튼만 사라짐
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/a5c3a9ba-67a1-4b20-b8cb-1691b857fd42/image.png)
+![image](https://github.com/user-attachments/assets/35085710-7358-4161-b81b-5e1fdbde6f4e)
 
 클릭한 버튼에만 가격을 붙일 수 있음
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/78f5ca6e-b5c4-48ac-a585-dae8fb56872c/image.png)
+```jsx
+$().ready(function () {
+  $(".package-green-button").on("click", function () {
+    /*
+    Javascript 에서 this의 의미는 함수를 실행시킨 주체
+    Java의 this와 개념이 유사하다.
+    */
+    console.log(this);
+
+    var package = $(this).closest(".package");
+    var priceValue = package.data("price");
+    var nameValue = package.data("name");
+
+    var price = $(`<p>${nameValue} From $${priceValue}</p>`);
+    price.on("click", function () {
+      $(this).css({
+        // 여기서의 this는 price
+        "background-color": "#FF0",
+      });
+});
+```
 
 remove가 위에 있으면 this가 사라져서 price 아래에 있는 this를 찾지 못함
 
 ### 부모 찾기
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/5b90c8f4-b2a5-4089-a3e9-cf90ce27b687/image.png)
+```jsx
+var h2 = $(".promo").parent().prev().prev();
+h2.text("목적지");
+
+// Rio -> h1엘리먼트
+var h1 = $(".promo")
+    .parent() // ul
+    .parent() // body
+    .find("h1");
+h1.text("어디로 갈까요?");
+```
 
 **`closest()`** : 가장 가까운 부모를 찾아감
 
@@ -328,12 +386,10 @@ data변수 사용(html 5부터 사용 가능)
 
 **`data-key=”value”`**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/9937a27b-4d76-45c0-8e41-f4481008d184/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/94007d5a-914e-4ae8-a6b4-08bb6d421585/image.png)
+![image](https://github.com/user-attachments/assets/64f0d745-6add-48d0-a179-c0261747923d)
 
 **`$(this).closest(”.package”);`**가 중복되면서 호출할 때마다 찾음 → 성능 저하
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/b76db449-e625-4d02-8a22-1b43865b0646/image.png)
+![image](https://github.com/user-attachments/assets/3effa4d1-50e0-44af-b8c7-70236eca0226)
 
 변수로 할당해줘서 한번만 찾게 함
