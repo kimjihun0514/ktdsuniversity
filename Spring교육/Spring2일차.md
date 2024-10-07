@@ -20,11 +20,12 @@ MVC Pattern을 통해 요청과 응답에 대한 전반적인 처리를 지원
 
 ## MVC 패턴의 아키텍쳐
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/1d5c6ae3-6019-4ee4-920a-2d7f9c8c42cb/image.png)
+![image](https://github.com/user-attachments/assets/90ab7287-c323-4c2e-b934-c61d7b126d78)
+
 
 ## MVC의 동작방식
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/1f9fcde0-948b-417f-95d1-f7d2b9a80373/image.png)
+![image](https://github.com/user-attachments/assets/076514d6-5a85-42b3-9af7-c1708a568438)
 
 1. dispatcher Servlet이 브라우저의 URL을 전송
 2. dispatcher Servlet이 Handle과 Mapping을 이용해 URL과 매칭이 되는 컨트롤러를 검색함 → 찾는 URL이 없으면 404 Error 전송
@@ -54,7 +55,7 @@ MVC Pattern을 통해 요청과 응답에 대한 전반적인 처리를 지원
 
 ### 게시글 목록 조회 요청 했을 때, 패키지별 호출 구조
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/acf2f095-c6a9-4866-b69b-ab16f3da11d6/image.png)
+![image](https://github.com/user-attachments/assets/77f34382-b3c3-41bc-b0af-10dbdd3d868b)
 
 ### BOARD 테이블의 컬럼구조로 BoradVO 클래스 생성
 
@@ -145,4 +146,5 @@ Dao별 Query라는 Mapper라는 xml파일에 적용
 
 target 폴더는 경로가 같은 것들을 모아주기 때문에
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/adc7ce80-efc0-46cb-85bf-bee2451632a9/image.png)
+![image](https://github.com/user-attachments/assets/224b4814-9ac7-4ca7-a712-e7ce311bc26c)
+
