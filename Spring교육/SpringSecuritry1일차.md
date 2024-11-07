@@ -387,7 +387,3 @@ public class SecurityPasswordEncoder extends Sha implements PasswordEncoder {
 ```
 
 ---
-
-## 인증 구현 - 기본 구성 재 정의
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d914575a-53b3-4065-8228-94f938883c80/4c28c166-7e21-4f37-9938-7cc6eeb6a084/image.png)
